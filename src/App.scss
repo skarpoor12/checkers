@@ -40,6 +40,7 @@
 .container {
   width:460px;
   margin: 100px auto 0 auto;
+  align-items: center;
 }
 
 .row {
@@ -78,20 +79,54 @@
               width: 40px;
               border-radius: 50%;
               display: inline-block;
-
+                opacity: 0.8;
               margin:5px 0 0 5px;
               position: absolute;
         }
         .piece--1 {
-          border:1px solid;
+
+          border:2px solid;
           background-color: #EADEC3;
         }
         .piece-1 {
-            border:1px solid;
+            border:2px solid;
+            background-color: #422C29;
+        }
+        .piece--1k {
+
+          border:2px dotted;
+          background-color: #EADEC3;
+        }
+        .piece-1k {
+            border:2px dotted;
             background-color: #422C29;
         }
         .piece-h {
-           background-color: rgba(128,0,0, 0.7);
+           border: 3px dotted;
+           background-color: rgba(128,0,0, 0.3);
         }
 }
 
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.popup-inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  border-radius: 20px;
+  background: white;
+}

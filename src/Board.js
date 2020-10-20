@@ -363,7 +363,9 @@ class Board extends React.Component {
                     return(<Row highlights={this.state.highlights} unHighlight={this.unHighlight.bind(this)} dragOver={this.dragOver.bind(this)} dragStart={this.dragStart.bind(this)} onDrop={this.onDrop.bind(this)} handleHover={this.handleHover.bind(this)} rowInd={ind} rowArr={row}/>);
                 })
                 }
-                <button onClick={this.togglePopup.bind(this)}>Instructions</button>
+
+                <div className="info">
+                    <button onClick={this.togglePopup.bind(this)}>Instructions</button>
                 {this.state.showPopup ?
                     <Popup
                               text="Hover on a checker to see possible moves. Drag your piece to make your move. Wait for the evil AI to make its move. Once you or the AI has captured all enemy checkers, a victory message will display below! Good luck!"
@@ -371,9 +373,10 @@ class Board extends React.Component {
                     />
                     : null
                     }
-                <h3>{message}</h3>
-                <h3>White: {this.state.white}</h3>
-                <h3>Black: {this.state.black}</h3>
+                    <h3>{message}</h3>
+                    <h3>White: {this.state.white}</h3>
+                    <h3>Black: {this.state.black}</h3>
+                </div>
 
             </div>
         );
